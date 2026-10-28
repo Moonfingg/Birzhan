@@ -1,0 +1,6 @@
+{
+  "name": "UK Interactive Explorer & C++ Engine | Serzhan Birzhan (APE2601)",
+  "description": "Интерактивный веб-сайт о Великобритании: анимированная векторная карта, звуковые эффекты Web Audio, строгие факты, C++ алгоритмический модуль и экспорт файлов для GitHub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

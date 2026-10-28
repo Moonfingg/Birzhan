@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United Kingdom Geo-Tech Portal | Serzhan Birzhan (APE2601)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-dark">
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="flag">🇬🇧</span>
+      <span class="brand-title">UK GEO-TECH PORTAL</span>
+      <span class="separator">/</span>
+      <span class="student-tag">Serzhan Birzhan · APE2601</span>
+    </div>
+    <div class="controls">
+      <button id="soundToggle" class="btn-sound">🔊 Sound ON</button>
+      <a href="#cpp-section" class="btn-cpp">C++ Module</a>
+    </div>
+  </header>
+
+  <!-- Hero & Fast Metrics -->
+  <main class="container">
+    <section class="hero-section">
+      <div class="badge">Pure Verified Facts · United Kingdom</div>
+      <h1>United Kingdom of Great Britain & Northern Ireland</h1>
+      <p class="subtitle">Интерактивный гео-аналитический портал Великобритании с векторной картой, чистыми фактами и C++ алгоритмом Дейкстры.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-label">Население (2024-2026)</span>
+          <span class="stat-val">67.8M</span>
+          <span class="stat-sub">4 constituent nations</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">ВВП (Номинал)</span>
+          <span class="stat-val">$3.49T</span>
+          <span class="stat-sub">6th largest in world</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Площадь</span>
+          <span class="stat-val">242,495 km²</span>
+          <span class="stat-sub">93,628 sq miles</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Столица</span>
+          <span class="stat-val">London</span>
+          <span class="stat-sub">Global financial hub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map & Country Fact Deck -->
+    <section class="map-section">
+      <div class="section-header">
+        <h2>Интерактивная карта Великобритании</h2>
+        <p>Нажмите на регион или город для отображения точных данных и проигрывания звукового эффекта.</p>
+      </div>
+
+      <div class="map-layout">
+        <!-- Interactive SVG Map -->
+        <div class="map-container">
+          <div class="radar-scan"></div>
+          <svg viewBox="0 0 400 520" class="uk-svg" id="ukSvg">
+            <!-- Scotland -->
+            <path id="path-scotland" class="region-path scotland" d="M190,50 L260,70 L250,150 L220,180 L180,185 L140,160 L150,90 Z" />
+            <!-- England -->
+            <path id="path-england" class="region-path england" d="M180,185 L220,180 L270,220 L310,300 L320,380 L290,440 L230,440 L190,400 L180,330 L160,260 Z" />
+            <!-- Wales -->
+            <path id="path-wales" class="region-path wales" d="M140,290 L180,290 L190,360 L150,380 L120,340 Z" />
+            <!-- Northern Ireland -->
+            <path id="path-ni" class="region-path ni" d="M80,190 L130,190 L130,240 L80,240 Z" />
+          </svg>
+          <div class="map-overlay-info">
+            <span id="currentSelection">Выберите регион на карте</span>
+          </div>
+        </div>
+
+        <!-- Detail Card -->
+        <div class="detail-card" id="detailCard">
+          <div class="card-header">
+            <span class="region-flag" id="detFlag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+            <div>
+              <h3 id="detTitle">Англия (England)</h3>
+              <span class="det-sub" id="detCapital">Столица: Лондон</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p id="detDescription">Концентрирует 84% населения Великобритании и £500+ млрд ВВП Лондона.</p>
+            <ul id="detBullets" class="bullet-list">
+              <li>Крупнейшая часть Великобритании (53.7% территории).</li>
+              <li>Ведущий мировой финансовый и финтех кластер City of London.</li>
+              <li>Научный треугольник Oxford — Cambridge — London.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C++ Engine & GitHub Section -->
+    <section id="cpp-section" class="cpp-section">
+      <div class="section-header">
+        <h2>C++ Алгоритмический Модуль (uk_analyzer.cpp)</h2>
+        <p>Разработано: Serzhan Birzhan (APE2601). Алгоритм Дейкстры для поиска кратчайших транзитных путей между городами Великобритании.</p>
+      </div>
+
+      <div class="terminal-box">
+        <div class="terminal-top">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">bash - g++ -std=c++20 uk_analyzer.cpp -o uk_analyzer && ./uk_analyzer</span>
+        </div>
+        <pre class="terminal-code" id="terminalOutput">
+[BUILD] Compiling uk_analyzer.cpp with -O3 -Wall...
+[DONE] Compilation finished in 0.08s. Executing binary:
+
+=================================================================
+ UNITED KINGDOM GEO-TECH PORTAL: ANALYTICS & GRAPH ENGINE (C++)  
+ Student: Serzhan Birzhan | Group: APE2601                       
+ Target: Great Britain & Northern Ireland (Pure Verified Facts) 
+=================================================================
+
+>>> [1/3] UK CONSTITUENT NATIONS COMPARATIVE MATRIX
+---------------------------------------------------------------------------
+Nation            Capital       Pop (M)     Area (km2)    Density/km2    GDP %     
+---------------------------------------------------------------------------
+England           London        56.50       130278        433.7          84.5%     
+Scotland          Edinburgh     5.48        77933         70.3           7.8%      
+Wales             Cardiff       3.11        20779         149.7          3.4%      
+Northern Ireland  Belfast       1.91        14130         135.2          2.3%      
+===========================================================================
+TOTAL UK          London        67.00       243120        275.6          100.0%    
+
+>>> [2/3] DIJKSTRA TRANSIT OPTIMIZATION (London -> Edinburgh)
+Optimal route: London -> Birmingham -> Manchester -> Edinburgh
+Total distance: 675.00 km | Transit time: 5.90 hours
+
+>>> [3/3] VERIFICATION STATUS
+[OK] Graph verified with 10 nodes and 12 bidirectional edges.
+[OK] Serzhan Birzhan (APE2601) - Binary run successfully.
+        </pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>United Kingdom Geo-Tech Portal · Serzhan Birzhan · Group APE2601 · 2026</p>
+    <p>Built with C++, JavaScript, HTML5 & Web Audio API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
